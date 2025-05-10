@@ -1,1 +1,1 @@
-# calculator
+# This is a real calculator. You will be able to do lots of cool stuff just like in a calculator.
