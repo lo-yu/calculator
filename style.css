@@ -1,0 +1,43 @@
+#container, #content, #display, #body, #firstRow, #secondRow, #thirdRow, #fourthRow {
+    display: flex;
+}
+
+
+#content {
+    flex-direction: column;
+    background-color:black;
+    height: 500px;
+    width: 500px;
+    
+}
+
+#body {
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+#display {
+    height: 150px;
+    background-color: aquamarine;
+    margin: 10px;
+
+}
+
+#firstRow, #secondRow, #thirdRow, #fourthRow {
+    justify-content: space-evenly;
+    height: 30px;
+
+}
+
+button {
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#container {
+    justify-content: center;
+    margin-top: 140px;
+}
