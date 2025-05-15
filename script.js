@@ -79,4 +79,14 @@ operators.forEach((chosenOperator) => {
     });
 });
 
-
+let equalsTo = document.querySelector(".equalsTo");
+    equalsTo.addEventListener("click", () => {
+        no1 = parseInt(no1);
+        no2 = parseInt(no2);
+        result = operate(no1, operator, no2)
+        console.log(operate(no1, operator, no2));
+        no2 = "";
+        operator = "";
+        no1 = result;
+        populateDisplay();
+    });
