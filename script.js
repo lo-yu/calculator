@@ -1,6 +1,9 @@
-let no1, no2, operator;
+let no1 = "";
+let no2 = "";
+let operator = "";
+let result = "";
 
-let add = function( a, b){
+let add = function(a, b){
     return a + b;
 }
 
@@ -18,20 +21,62 @@ let divide = function(a,b){
 
 let operate = function(n1, op, n2){
     if (op == "+"){
-        add(n1, n2);
+        return add(n1, n2);
 
     }
     else if (op == "-"){
-        sub(n1, n2);
+        return sub(n1, n2);
         
     }
     else if (op == "*"){
-        multiply(n1, n2);
+        return multiply(n1, n2);
         
     }
     else if (op == "/"){
-        divide(n1, n2);
+        return divide(n1, n2);
         
     }
-
 }
+
+let display = document.querySelector("#display");
+let populateDisplay = function(){
+    if (no1 != ""){
+        display.textContent = no1;
+    }
+    if (operator != ""){
+        display.textContent += operator;
+    }
+    if (no2 != ""){
+        display.textContent += no2;
+    }
+        
+};     
+
+
+let numbers = document.querySelectorAll(".number");
+numbers.forEach((number) => { 
+    number.addEventListener("click", () => {
+        if(!operator){
+            no1 += number.textContent;
+            console.log(no1);
+        }
+        else {
+            no2 += number.textContent
+            console.log(no2);
+        }
+        populateDisplay();
+    });    
+});
+
+let operators = document.querySelectorAll(".operator");
+operators.forEach((chosenOperator) => {
+    chosenOperator.addEventListener("click", () => {
+        if (!operator){  
+            operator = chosenOperator.textContent;
+            console.log(operator);
+            populateDisplay();
+        }
+    });
+});
+
+
