@@ -61,7 +61,7 @@ numbers.forEach((number) => {
             console.log(no1);
         }
         else {
-            no2 += number.textContent
+            no2 += number.textContent;
             console.log(no2);
         }
         populateDisplay();
@@ -71,7 +71,7 @@ numbers.forEach((number) => {
 let operators = document.querySelectorAll(".operator");
 operators.forEach((chosenOperator) => {
     chosenOperator.addEventListener("click", () => {
-        if (!operator){  
+        if (!operator && no1){  
             operator = chosenOperator.textContent;
             console.log(operator);
             populateDisplay();
@@ -90,3 +90,12 @@ let equalsTo = document.querySelector(".equalsTo");
         no1 = result;
         populateDisplay();
     });
+
+let clear = document.querySelector(".clear");
+clear.addEventListener("click", () => {
+    no1 = "";
+    operator = "";
+    no2 = "";
+    result = "";
+    display.textContent = "";
+});

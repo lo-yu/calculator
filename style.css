@@ -5,9 +5,9 @@
 
 #content {
     flex-direction: column;
-    background-color:black;
-    height: 500px;
-    width: 500px;
+    background-color: black;
+    height: 400px;
+    width: 400px;
     
 }
 
@@ -19,9 +19,11 @@
 
 
 #display {
-    height: 150px;
-    background-color: aquamarine;
+    height: 100px;
+    background-color: whitesmoke;
     margin: 10px;
+    font-size: 26px;
+    font-weight: bold;
 
 }
 
@@ -34,10 +36,18 @@
 button {
     flex-grow: 1;
     font-weight: bold;
-    font-size: larger;
+    font-size: 22px;
 }
 
 #container {
     justify-content: center;
-    margin-top: 140px;
+    margin-top: 170px;
+}
+
+.operator {
+    background-color: orange;
+}
+
+.number {
+    background-color: rgb(165, 165, 165);
 }
