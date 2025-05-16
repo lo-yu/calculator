@@ -16,7 +16,15 @@ let multiply = function(a,b){
 }
 
 let divide = function(a,b){
-    return a / b;
+    if (b != 0){
+        return a / b;
+    }
+    else {
+        alert("YOU CAN NOT DIVIDE A NO BY 0");
+        result = "";
+        display.textContent = "";
+    }
+    
 }
 
 let operate = function(n1, op, n2){
@@ -33,7 +41,7 @@ let operate = function(n1, op, n2){
         
     }
     else if (op == "/"){
-        return divide(n1, n2);
+        return  divide(n1, n2);
         
     }
 }
