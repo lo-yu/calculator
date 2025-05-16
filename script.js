@@ -52,7 +52,6 @@ let populateDisplay = function(){
         
 };     
 
-
 let numbers = document.querySelectorAll(".number");
 numbers.forEach((number) => { 
     number.addEventListener("click", () => {
@@ -80,7 +79,8 @@ operators.forEach((chosenOperator) => {
 });
 
 let equalsTo = document.querySelector(".equalsTo");
-    equalsTo.addEventListener("click", () => {
+equalsTo.addEventListener("click", () => {
+    if (no1 != "" && operator != "" && no2 != ""){
         no1 = parseInt(no1);
         no2 = parseInt(no2);
         result = operate(no1, operator, no2)
@@ -89,7 +89,8 @@ let equalsTo = document.querySelector(".equalsTo");
         operator = "";
         no1 = result;
         populateDisplay();
-    });
+    }
+});
 
 let clear = document.querySelector(".clear");
 clear.addEventListener("click", () => {
